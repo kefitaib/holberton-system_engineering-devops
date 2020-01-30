@@ -1,15 +1,13 @@
-.\" Manpage for holberton.
-.\" Contact holberton.com to correct errors or typos.
 .TH man 2 "04 May 2015" "0.32" "holberton man page"
 .SH NAME
 .B holberton 
-- become a full-stack software engineer. 
+- become a full-stack software engineer.
 .SH SYNOPSIS
 holberton [STUDENTNAME]
 .SH DESCRIPTION
 Holberton school is a project-base alternative to college for the next generation of a software engineers.
 .SH OPTIONS
-.B holberton 
+.B holberton
 does not take any option. However, you can supply studentname.
 .SH SEE ALSO
 .I peerlearning(2), projectbased(2), fullstuck(2), betty(1)
