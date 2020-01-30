@@ -10,7 +10,7 @@ holberton [STUDENTNAME]
 Holberton school is a project-base alternative to college for the next generation of a software engineers.
 .SH OPTIONS
 .B holberton 
- does not take any option. However, you can supply studentname.
+does not take any option. However, you can supply studentname.
 .SH SEE ALSO
 .I peerlearning(2), projectbased(2), fullstuck(2), betty(1)
 .SH BUGS
