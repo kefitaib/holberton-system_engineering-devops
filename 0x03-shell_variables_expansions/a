@@ -1,6 +1,7 @@
-total 68
+total 72
 -rwxrw-r-- 1 vagrant vagrant 28 Feb  3 10:50 0-alias
 -rwxrw-r-- 1 vagrant vagrant 43 Feb  3 20:50 100-rot13
+-rwxrw-r-- 1 vagrant vagrant 24 Feb  3 21:18 101-odd
 -rwxrw-r-- 1 vagrant vagrant 39 Feb  3 13:10 10-love_exponent_breath
 -rwxrw-r-- 1 vagrant vagrant 32 Feb  3 13:40 11-binary_to_decimal
 -rwxrw-r-- 1 vagrant vagrant 57 Feb  3 13:51 12-combinations
@@ -15,5 +16,5 @@ total 68
 -rwxrw-r-- 1 vagrant vagrant 37 Feb  3 12:55 7-create_global_variable
 -rwxrw-r-- 1 vagrant vagrant 43 Feb  3 12:59 8-true_knowledge
 -rwxrw-r-- 1 vagrant vagrant 39 Feb  3 13:08 9-divide_and_rule
--rw-rw-r-- 1 vagrant vagrant  0 Feb  3 21:03 a
+-rw-rw-r-- 1 vagrant vagrant  0 Feb  3 21:22 a
 -rw-rw-r-- 1 vagrant vagrant 10 Feb  3 10:54 README.md
