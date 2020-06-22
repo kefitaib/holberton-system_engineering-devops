@@ -7,4 +7,5 @@ trap "rm -rf /var/run/holbertonscript.pid; exit" SIGQUIT SIGTERM
 while :
       do
 	    echo To infinity and beyond
+	    sleep 2
 done
