@@ -9,5 +9,5 @@ file_line { 'add new config':
 file_line { 'update config':
     ensure => 'present',
     path   => '/etc/ssh/ssh_config',
-    replace => 'PasswordAuthentication no'
+    line   => 'PasswordAuthentication no'
 }
