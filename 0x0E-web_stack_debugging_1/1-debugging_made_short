@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Make it sweet and short
+sudo service nginx stop
+sudo service nginx status
+
