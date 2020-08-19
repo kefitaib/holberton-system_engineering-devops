@@ -3,10 +3,10 @@
 
 func ()
 {
-	dig "$1.$2" | grep -A1 'ANSWER SECTION:' | awk -v var="$1" 'NR==2{print "The subdomain", var, "is a", $4, "record and points to", $5 }'
+dig "$1.$2" | grep -A1 'ANSWER SECTION:' | awk -v var="$1" 'NR==2{print "The subdomain", var, "is a", $4, "record and points to", $5 }'
 }
 
-if [ "$#" -eq 1 ];
+if [ "$#" -eq 1 ]
 then
 	func "www" "$1"
  	func "lb-01" "$1"
