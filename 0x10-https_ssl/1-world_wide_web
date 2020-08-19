@@ -16,4 +16,3 @@ elif [ "$#" -eq 2 ]
 then
 	func "$2" "$1"
 fi
-
