@@ -12,6 +12,7 @@ then
  	func "lb-01" "$1"
 	func "web-01" "$1"
 	func "web-02" "$1"
-else
+elif [ "$#" -eq 2 ]
+then
 	func "$2" "$1"
 fi
