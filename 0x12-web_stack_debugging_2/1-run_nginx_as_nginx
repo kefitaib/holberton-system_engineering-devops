@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# check
+echo "listen 80;" >> /etc/nginx/sites-available/default
+sudo -u nginx service nginx start
