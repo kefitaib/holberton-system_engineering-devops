@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
 # check
-su -c "$1"
-whoami
+sudo -u "$1" whoami
