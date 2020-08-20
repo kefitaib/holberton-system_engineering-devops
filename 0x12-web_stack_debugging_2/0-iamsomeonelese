@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # check
-sudo "$1"
+su -c "$1"
 whoami
