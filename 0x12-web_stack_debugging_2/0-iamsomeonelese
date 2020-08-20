@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# check
+sudo "$1"
+whoami
