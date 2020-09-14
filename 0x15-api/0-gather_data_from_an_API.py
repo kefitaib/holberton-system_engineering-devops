@@ -12,11 +12,8 @@ from sys import argv
 
 if __name__ == "__main__":
 
-    v2 = {'userId': ""}
-    v = {'id': ""}
-    if len(argv) == 2:
-        v2['userId'] = argv[1]
-        v['id'] = argv[1]
+    v2 = {'userId': argv[1]}
+    v = {'id': argv[1]}
 
     req1 = requests.get('https://jsonplaceholder.typicode.com/users', params=v)
     req = requests.get('https://jsonplaceholder.typicode.com/todos', params=v2)
