@@ -15,7 +15,6 @@ if __name__ == "__main__":
     v2 = {'userId': ""}
     v = {'id': ""}
     if len(argv) == 2:
-        print(len(argv))
         v2['userId'] = argv[1]
         v['id'] = argv[1]
 
