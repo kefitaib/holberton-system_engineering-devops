@@ -24,5 +24,5 @@ if __name__ == "__main__":
         s += '"{}","{}","{}","{}"\n'.format(argv[1], req1[0].get('username'),
                                             r.get('completed'), r.get('title'))
 
-    with open('2.csv', "w") as f:
+    with open(argv[1] + '.csv', "w") as f:
         f.write(s)
