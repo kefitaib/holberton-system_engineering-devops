@@ -27,4 +27,5 @@ if __name__ == "__main__":
           format(req1.json()[0].get('name'), done, len(req.json())))
 
     for r in req.json():
-        print("\t {}".format(r.get('title')))
+        if r.get('completed') is True:
+            print("\t {}".format(r.get('title')))
