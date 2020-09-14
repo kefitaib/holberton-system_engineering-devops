@@ -26,7 +26,7 @@ if __name__ == "__main__":
         d = {}
         d['task'] = r.get('title')
         d['completed'] = r.get('completed')
-        d['username"'] = req1[0].get('username')
+        d['username'] = req1[0].get('username')
         l.append(d)
 
     res[argv[1]] = l
