@@ -28,7 +28,7 @@ if __name__ == "__main__":
                 if r.get('completed') is True:
                     done += 1
 
-            print('Employee {} is done with ({}/{}):'.
+            print('Employee {} is done with tasks({}/{}):'.
                   format(req1.json()[0].get('name'), done, len(req.json())))
 
             for r in req.json():
