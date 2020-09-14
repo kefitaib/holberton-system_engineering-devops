@@ -21,18 +21,13 @@ if __name__ == "__main__":
     req1 = requests.get('https://jsonplaceholder.typicode.com/users', params=v)
     req = requests.get('https://jsonplaceholder.typicode.com/todos', params=v2)
 
-    try:
-        if req.json():
-            done = 0
-            for r in req.json():
-                if r.get('completed') is True:
-                    done += 1
+    done = 0
+    for r in req.json():
+        if r.get('completed') is True:
+            done += 1
 
-            print('Employee {} is done with tasks({}/{}):'.
-                  format(req1.json()[0].get('name'), done, len(req.json())))
+    print('Employee {} is done with tasks({}/{}):'.
+          format(req1.json()[0].get('name'), done, len(req.json())))
 
-            for r in req.json():
-                print("\t {}".format(r.get('title')))
-
-    except:
-        pass
+    for r in req.json():
+        print("\t {}".format(r.get('title')))
