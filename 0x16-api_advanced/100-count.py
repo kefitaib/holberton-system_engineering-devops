@@ -39,9 +39,27 @@ Chrome/39.0.2171.95 Safari/537.36'}
         d = {k: v for k, v in sorted(word_dict.items(), key=lambda
                                      item: item[1], reverse=True)}
 
+        prev = -1
+        aux = {}
         for k, v in d.items():
             if v != 0:
-                print("{}: {}".format(k, v))
+                if v == prev:
+                    aux[k] = v
+                    continue
+
+                f = {ke: va for ke, va in sorted(aux.items(),
+                                                 key=lambda item: item[0])}
+                for x, y in f.items():
+                    print("{}: {}".format(x, y))
+
+                aux = {}
+                aux[k] = v
+                prev = v
+
+        f = {ke: va for ke, va in sorted(aux.items(),
+                                         key=lambda item: item[0])}
+        for x, y in f.items():
+            print("{}: {}".format(x, y))
 
         return
 
