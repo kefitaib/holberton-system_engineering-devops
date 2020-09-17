@@ -21,7 +21,7 @@ Chrome/39.0.2171.95 Safari/537.36'}
         subreddit), headers=user_agent, params=params)
 
     if res.status_code == 404:
-        return 0
+        return None
 
     for sub in res.json().get("data").get("children"):
         hot_list.append(sub.get("data").get("title"))
