@@ -24,7 +24,7 @@ Chrome/39.0.2171.95 Safari/537.36'}
         word_dict = {k: 0 for k in word_list}
 
     if res.status_code == 404:
-        pass
+        print()
 
     else:
         for sub in res.json().get("data").get("children"):
