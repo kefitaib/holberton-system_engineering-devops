@@ -37,7 +37,11 @@ Chrome/39.0.2171.95 Safari/537.36'}
 
         after = res.json().get("data").get("after")
         if not after:
-            for k, v in word_dict.items():
+            d = {k: v for k, v in sorted(word_dict.items(),
+                                         key=lambda item: item[1],
+                                         reverse=True)}
+
+            for k, v in d.items():
                 if v != 0:
                     print("{}: {}".format(k, v))
 
