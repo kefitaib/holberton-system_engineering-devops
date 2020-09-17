@@ -5,16 +5,7 @@
 import requests
 
 
-def count_words(subreddit, word_list):
-    """ retuen to main """
-
-    res = count(subreddit, {k: 0 for k in word_list}, after="")
-    for k, v in res.items():
-        if v != 0:
-            print("{}: {}".format(k, v))
-
-
-def count(subreddit, word_dict, after=""):
+def count_words(subreddit, word_list, after="", word_dict={}):
     """
     unction that queries the Reddit API and returns a list containing
     the titles of all hot articles for a given subreddit
@@ -28,6 +19,9 @@ Chrome/39.0.2171.95 Safari/537.36'}
 
     res = requests.get('https://www.reddit.com/r/{}/hot.json'.format(
         subreddit), headers=user_agent, params=params)
+
+    if not word_dict:
+        word_dict = {k: 0 for k in word_list}
 
     if res.status_code == 404:
         pass
@@ -43,6 +37,10 @@ Chrome/39.0.2171.95 Safari/537.36'}
 
         after = res.json().get("data").get("after")
         if not after:
-            return word_dict
+            for k, v in word_dict.items():
+                if v != 0:
+                    print("{}: {}".format(k, v))
 
-        return count(subreddit, word_dict, after)
+            return
+
+        return count_words(subreddit, word_list, after, word_dict)
