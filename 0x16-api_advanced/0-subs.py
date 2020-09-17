@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 
-from fake_useragent import UserAgent
 import requests
 
 
@@ -12,8 +11,10 @@ def number_of_subscribers(subreddit):
     If an invalid subreddit is given
     """
 
-    ua = UserAgent()
-    user_agent = {'User-agent': str(ua.chrome)}
+    user_agent = {'User-agent': 'Mozilla/5.0 (Macintosh; \
+Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) \
+Chrome/39.0.2171.95 Safari/537.36'}
+
     res = requests.get('https://www.reddit.com/r/{}/about.json'.format(
         subreddit), headers=user_agent)
 
